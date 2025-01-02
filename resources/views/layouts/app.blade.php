@@ -23,9 +23,7 @@
 							<ul>
 								<li><a href="{{ url('/feed/categoria') }}">Categorias</a></li>
 								<li><a href="{{ url('/feed/autor') }}">Autores</a></li>
-								<li><a href="#">Feugiat</a></li>
-								<li><a href="#">Tempus</a></li>
-								<li><a href="#">Adipiscing</a></li>
+
 							</ul>
 						</nav>
 						<nav class="main">
@@ -52,14 +50,21 @@
 									<input type="text" name="query" placeholder="Search" />
 								</form>
 							</section>
-
+							
+						<!-- Actions -->
+						<section>
+								<ul class="actions stacked">
+									<li><a href="{{url('/login')}}" class="button large fit">Log In</a></li>
+								</ul>
+							</section>
+						
 						<!-- Links -->
 							<section>
 								<ul class="links">
 									<li>
-										<a href="#">
-											<h3>Lorem ipsum</h3>
-											<p>Feugiat tempus veroeros dolor</p>
+										<a href="{{url('/login')}}">
+											<h3>Login</h3>
+
 										</a>
 									</li>
 									<li>
@@ -83,12 +88,8 @@
 								</ul>
 							</section>
 
-						<!-- Actions -->
-							<section>
-								<ul class="actions stacked">
-									<li><a href="#" class="button large fit">Log In</a></li>
-								</ul>
-							</section>
+
+
 
 					</section>
 

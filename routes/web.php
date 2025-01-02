@@ -4,8 +4,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FuncionarioController;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\PostagemController;
+use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\FeedController;
 use App\Http\Controllers\ComentarioController;
+use App\Http\Controllers\EstoqueController;
+use App\Http\Controllers\SaidaController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -88,5 +92,49 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/postagem/{id}', [PostagemController::class, 'destroy'])->name('postagem.destroy');
 
     // ----------------- postagem -----------------
+    //produto
+
+    Route::get('/produto', [ProdutoController::class, 'index'])->name('produto.index');
+
+    Route::get('/produto/create', [ProdutoController::class, 'create'])->name('produto.create');
+
+    Route::post('/produto', [ProdutoController::class, 'store'])->name('produto.store');
+
+    Route::get('/produto/{id}', [ProdutoController::class, 'show'])->name('produto.show');
+
+    Route::get('/produto/{id}/edit', [ProdutoController::class, 'edit'])->name('produto.edit');
+
+    Route::put('/produto/{id}', [ProdutoController::class, 'update'])->name('produto.update');
+
+    Route::delete('/produto/{id}', [ProdutoController::class, 'destroy'])->name('produto.destroy');
+
+    Route::post('/produto/add/{id}', [ProdutoController::class, 'add'])->name('produto.add');
+
+    Route::get('/pesquisar', [ProdutoController::class, 'pesquisar'])->name('produtos.pesquisar');
+
+    Route::get('/home', [ProdutoController::class, 'min'])->name('home');
+    
+    
+    Route::get('home/funcionarios', [HomeController::class,'funcionarios'])->name('home.funcionarios');
+    //Saida
+    Route::get('/Saida', [ProdutoController::class, 'saida_produtos'])->name('saida_produtos');
+
+    Route::get('/Saida/vender', [ProdutoController::class, 'saida_vender'])->name('saida_vender');
+
+    Route::post('Saida/vender/{id}', [ProdutoController::class, 'vender'])->name('vender');
+   
+
+//protudo
+
+//estoque
+Route::get('/estoque', [EstoqueController::class, 'index'])->name('estoque.index');
+
+Route::get('/estoque/{id}', [EstoqueController::class, 'show'])->name('estoque.show');
+
+
 
 });
+
+
+
+ 

@@ -18,6 +18,9 @@ class DatabaseSeeder extends Seeder
             CategoriaSeeder::class,
             PostagemSeeder::class,
             ComentarioSeeder::class,
+            ProdutoSeeder::class,
+            EstoqueSeeder::class,
+            
         ]);
     }
 }

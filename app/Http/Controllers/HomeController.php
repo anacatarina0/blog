@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Produto;
+use App\Models\Funcionario;
 
 class HomeController extends Controller
 {
@@ -25,4 +27,23 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function funcionarios()
+    {
+        $funcionarios = Funcionario::orderBy ('nome','ASC')->get();
+        return view('controleAcesso.controleDeAcesso', compact('funcionarios'));
+        
+        
+
+    }
+
+   /* public function min()
+    {
+        $produtos = Produto::all();
+        //$produtos = Produto::where('quantidade', '<=', 'quantidade_min')->get();
+      
+        return view('home', compact('produtos'));
+
+
+    } */
 }

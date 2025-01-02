@@ -316,27 +316,41 @@ return [
             'can' => 'manage-blog',
         ],
         [
-            'text' => 'pages',
-            'url' => 'admin/pages',
+            'text' => 'Painel de controle',
+            'url' => 'home',
             'icon' => 'far fa-fw fa-file',
-            'label' => 4,
-            'label_color' => 'success',
         ],
-        ['header' => 'account_settings'],
         [
+            'header' => 'account_settings',
             'text' => 'Categoria',
             'url' => 'categoria',
             'icon' => 'fas fa-fw fa-user',
             'can' => 'is_admin',
         ],
         [
+        'text' => 'Categoria',
+        'url' => 'categoria',
+        'icon' => 'fas fa-fw fa-user',
+        'can' => 'is_admin',
+    ],
+        [
             'text' => 'Postagem',
             'url' => 'postagem',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
-            'text' => 'profile',
-            'url' => 'admin/settings',
+            'text' => 'Produto',
+            'url' => 'produto',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+        [
+            'text' => 'Saída',
+            'url' => 'Saida',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+        [
+            'text' => 'Gestão de contas',
+            'url' => 'home/funcionarios',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
